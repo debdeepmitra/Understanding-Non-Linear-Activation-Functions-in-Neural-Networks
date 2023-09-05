@@ -5,8 +5,9 @@ Activation functions are a crucial component of artificial neural networks. They
 ## 1. Logistic or Sigmoid Activation 
 The sigmoid activation function is defined as: 
 
-$$ \text{sigmoid}(z) = \frac{1}{1 + e^{-z}} $$ - **Range:** (0, 1) 
+$$ \text{sigmoid}(z) = \frac{1}{1 + e^{-z}} $$ 
 
+- **Range:** (0, 1) 
 - **Common Use:** Often used in the last layer for binary classification, where it maps the linear activation to a probability range.
 
 
@@ -74,6 +75,7 @@ $$ \text{GELU}(z) = 0.5z\left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715z^
 
 ## 9. Softmax Activation 
 The softmax activation function is used in the output layer for multi-class classification: 
+
 $$ \text{softmax}(x_{i}) = \frac{\exp(x_{i})}{\sum_{j} \exp(x_{j})} $$
 
 - **Range:** [0, 1]

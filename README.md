@@ -93,7 +93,7 @@ $$ \text{swish}(z) = z \cdot \sigma(z) = \frac{z}{1 + e^{-z}} $$
 ## 11. Softplus Activation
 Softplus is defined as: 
 
-$$ \text{Softplus}(z) = \ln(1 + e^z) $$
+$$ \text{softplus}(z) = \ln(1 + e^z) $$
 
 - **Range:** (0, ∞)
 - **Advantage:** Approximates ReLU. Useful in scenarios where you need a non-linear activation that remains positive.

@@ -66,7 +66,7 @@ $$ \text{selu}(z) = S \cdot \max(L(e^z - 1), z) $$
 ## 8. Gaussian Error Linear Unit (GELU) Activation
 The GELU activation function combines sigmoid and tanh functions to create a smooth non-linear activation. It is defined as:
 
-$$ \text{GELU}(z) = 0.5z\left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715z^3)\right)\right) $$
+$$ \text{gelu}(z) = 0.5z\left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715z^3)\right)\right) $$
 
 - **Range:** Approximately (-0.17, 0.17).
 - **Advantage:** Suitable for deep learning models, particularly transformers like BERT and GPT-2.

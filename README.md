@@ -66,17 +66,34 @@ $$ \text{selu}(z) = S \cdot \max(L(e^z - 1), z) $$
 ## 8. Gaussian Error Linear Unit (GELU) Activation
 The GELU activation function combines sigmoid and tanh functions to create a smooth non-linear activation. It is defined as:
 
-$$ \text{gelu}(z) = 0.5z\left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715z^3)\right)\right) $$
+$$ \text{gelu}(z) = 0.5z\left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(z + 0.044715z^3)\right)\right) $$
 
-- **Range:** Approximately (-0.17, 0.17).
+- **Range:** Approximately (-0.17, 0.17)
 - **Advantage:** Suitable for deep learning models, particularly transformers like BERT and GPT-2.
-- **Common Use:** Enables effective training of deep neural networks by providing smoothness and non-zero gradients.
-
+  
 
 ## 9. Softmax Activation 
 The softmax activation function is used in the output layer for multi-class classification: 
 
-$$ \text{softmax}(x_{i}) = \frac{\exp(x_{i})}{\sum_{j} \exp(x_{j})} $$
+$$ \text{softmax}(z_{i}) = \frac{\exp(z_{i})}{\sum_{j} \exp(z_{j})} $$
 
 - **Range:** [0, 1]
 - **Common Use:** Converts raw scores (logits) into a probability distribution over multiple classes.
+
+
+## Swish Activation
+Swish is a smooth non-linear activation function defined as: 
+
+$$ \text{swish}(z) = z \cdot \sigma(z) = \frac{z}{1 + e^{-z}} $$
+
+- **Range:** (-∞, ∞)
+- **Advantage:** Swish is similar to ReLU but generally performs better due to its smoothness. Can help alleviate some of the vanishing gradient problems.
+
+
+## Softplus Activation
+Softplus is defined as: 
+
+$$ \text{Softplus}(z) = \ln(1 + e^z) $$
+
+- **Range:** (0, ∞)
+- **Advantage:** Approximates ReLU. Useful in scenarios where you need a non-linear activation that remains positive.

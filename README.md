@@ -81,7 +81,7 @@ $$ \text{softmax}(z_{i}) = \frac{\exp(z_{i})}{\sum_{j} \exp(z_{j})} $$
 - **Common Use:** Converts raw scores (logits) into a probability distribution over multiple classes.
 
 
-## Swish Activation
+## 10. Swish Activation
 Swish is a smooth non-linear activation function defined as: 
 
 $$ \text{swish}(z) = z \cdot \sigma(z) = \frac{z}{1 + e^{-z}} $$
@@ -90,7 +90,7 @@ $$ \text{swish}(z) = z \cdot \sigma(z) = \frac{z}{1 + e^{-z}} $$
 - **Advantage:** Swish is similar to ReLU but generally performs better due to its smoothness. Can help alleviate some of the vanishing gradient problems.
 
 
-## Softplus Activation
+## 11. Softplus Activation
 Softplus is defined as: 
 
 $$ \text{Softplus}(z) = \ln(1 + e^z) $$
